@@ -38,11 +38,11 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jTextField1" min="-2" pref="425" max="-2" attributes="0"/>
+                  <Component id="txtDau" min="-2" pref="425" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="jRadioButton1" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="radOn" min="-2" pref="50" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jRadioButton2" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="radOff" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
@@ -131,11 +131,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTextField1" min="-2" pref="51" max="-2" attributes="0"/>
+              <Component id="txtDau" min="-2" pref="51" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jRadioButton1" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                  <Component id="jRadioButton2" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="radOn" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="radOff" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -229,7 +229,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="txtDau">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
       </Properties>
@@ -237,7 +237,7 @@
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtDau"/>
       </AccessibilityProperties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+    <Component class="javax.swing.JRadioButton" name="radOn">
       <Properties>
         <Property name="text" type="java.lang.String" value="ON"/>
       </Properties>
@@ -245,16 +245,19 @@
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="radOn"/>
       </AccessibilityProperties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radOnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+    <Component class="javax.swing.JRadioButton" name="radOff">
       <Properties>
         <Property name="text" type="java.lang.String" value="OFF"/>
       </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="radOff"/>
       </AccessibilityProperties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radOffActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnX2">
       <Properties>
@@ -307,6 +310,9 @@
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="btn+/-"/>
       </AccessibilityProperties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCongchiatruActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnExp">
       <Properties>

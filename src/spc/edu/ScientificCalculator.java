@@ -17,12 +17,17 @@ public class ScientificCalculator extends javax.swing.JFrame {
      */
     public ScientificCalculator() {
         initComponents();
+        radOn.setEnabled(false);
     }
     double num1, num2, result;
     String opr;
     public void enable()
     {
-        txtDau.setEnabled(true);
+         txtDau.setEnabled(true);
+         radOn.setEnabled(false);
+        radOff.setEnabled(true);
+
+        
        jButton15.setEnabled(true);
        jButton11.setEnabled(true);
        btn2.setEnabled(true);
@@ -58,11 +63,48 @@ public class ScientificCalculator extends javax.swing.JFrame {
        btnCham.setEnabled(true);
        btnBang.setEnabled(true);
        
-       
-       
-       
-       
-       
+    }
+    public void disable()
+    {
+         txtDau.setEnabled(false);
+         radOn.setEnabled(true);
+        radOff.setEnabled(false);
+
+        
+       jButton15.setEnabled(false);
+       jButton11.setEnabled(false);
+       btn2.setEnabled(false);
+       btn3.setEnabled(false);
+       btn4.setEnabled(false);
+       btn5.setEnabled(false);
+       btn6.setEnabled(false);
+       btn7.setEnabled(false);
+       btn8.setEnabled(false);
+       btn9.setEnabled(false);
+       btnR.setEnabled(false);
+       btnExp.setEnabled(false);
+       btnSin.setEnabled(false);
+      btnCos.setEnabled(false);
+       btnTan.setEnabled(false);
+       btn1x.setEnabled(false);
+       btnLog.setEnabled(false);
+       btnSinh.setEnabled(false);
+       btnCosh.setEnabled(false);
+       btnTanh.setEnabled(false);
+       btnXy.setEnabled(false);
+       btnPhantram.setEnabled(false);
+       btnClr.setEnabled(false);
+       btnB.setEnabled(false);
+       btnCong.setEnabled(false);
+       btnTru.setEnabled(false);
+       btnNhan.setEnabled(false);
+       btnChia.setEnabled(false);
+       btnX3.setEnabled(false);
+       btnX2.setEnabled(false);
+       btnN.setEnabled(false);
+       btnCongchiatru.setEnabled(false);
+       btnCham.setEnabled(false);
+       btnBang.setEnabled(false);
        
     }
 
@@ -76,9 +118,9 @@ public class ScientificCalculator extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton3 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        txtDau = new javax.swing.JTextField();
+        radOn = new javax.swing.JRadioButton();
+        radOff = new javax.swing.JRadioButton();
         btnX2 = new javax.swing.JButton();
         btnR = new javax.swing.JButton();
         btnXy = new javax.swing.JButton();
@@ -121,16 +163,21 @@ public class ScientificCalculator extends javax.swing.JFrame {
         setResizable(false);
         setType(java.awt.Window.Type.UTILITY);
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtDau.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
-        jRadioButton1.setText("ON");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        radOn.setText("ON");
+        radOn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                radOnActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setText("OFF");
+        radOff.setText("OFF");
+        radOff.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radOffActionPerformed(evt);
+            }
+        });
 
         btnX2.setText("x^2");
         btnX2.addActionListener(new java.awt.event.ActionListener() {
@@ -161,6 +208,11 @@ public class ScientificCalculator extends javax.swing.JFrame {
         });
 
         btnCongchiatru.setText("+/-");
+        btnCongchiatru.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCongchiatruActionPerformed(evt);
+            }
+        });
 
         btnExp.setText("exp");
         btnExp.addActionListener(new java.awt.event.ActionListener() {
@@ -372,11 +424,11 @@ public class ScientificCalculator extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDau, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(radOn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(radOff, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -444,11 +496,11 @@ public class ScientificCalculator extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtDau, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(radOn, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(radOff, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -524,9 +576,9 @@ public class ScientificCalculator extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
-        jTextField1.getAccessibleContext().setAccessibleName("txtDau");
-        jRadioButton1.getAccessibleContext().setAccessibleName("radOn");
-        jRadioButton2.getAccessibleContext().setAccessibleName("radOff");
+        txtDau.getAccessibleContext().setAccessibleName("txtDau");
+        radOn.getAccessibleContext().setAccessibleName("radOn");
+        radOff.getAccessibleContext().setAccessibleName("radOff");
         btnX2.getAccessibleContext().setAccessibleName("btnX^2");
         btnR.getAccessibleContext().setAccessibleName("btnR");
         btnXy.getAccessibleContext().setAccessibleName("btnX^y");
@@ -787,9 +839,19 @@ public class ScientificCalculator extends javax.swing.JFrame {
          txtDau.setText(txtDau.getText() + fact);
     }//GEN-LAST:event_btnNActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    private void radOnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radOnActionPerformed
+        enable();
+    }//GEN-LAST:event_radOnActionPerformed
+
+    private void radOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radOffActionPerformed
+       disable();
+    }//GEN-LAST:event_radOffActionPerformed
+
+    private void btnCongchiatruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCongchiatruActionPerformed
+         double t= Double.parseDouble(String.valueOf(txtDau.getText()));
+         t=t*(-1);
+         txtDau.setText(String.valueOf(t));
+    }//GEN-LAST:event_btnCongchiatruActionPerformed
 
     /**
      * @param args the command line arguments
@@ -862,8 +924,8 @@ public class ScientificCalculator extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JRadioButton radOff;
+    private javax.swing.JRadioButton radOn;
+    private javax.swing.JTextField txtDau;
     // End of variables declaration//GEN-END:variables
 }
